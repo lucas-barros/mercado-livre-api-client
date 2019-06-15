@@ -4,6 +4,7 @@ import { searchProducts, addToCart } from 'store/products/actions';
 import { LIMIT } from 'services';
 import { Search, Container, Product, List } from 'components';
 import { Flex, Box } from '@rebass/grid';
+import { Element } from 'react-scroll';
 
 const Home = ({ searchProducts, addToCart, products, loading, paging, searchString }) => {
   const { total, offset } = paging;
@@ -21,7 +22,14 @@ const Home = ({ searchProducts, addToCart, products, loading, paging, searchStri
   return (
     <Container>
       <Box mb={3}>
-        <Search loading={loading} value={searchString} handler={e => searchProducts(e.target.value)} />
+        <Element name="search">
+          <Search
+            loading={loading}
+            placeHolder="Search products"
+            value={searchString}
+            handler={e => searchProducts(e.target.value)}
+          />
+        </Element>
       </Box>
       <List
         hasNext={hasNext(total)}
