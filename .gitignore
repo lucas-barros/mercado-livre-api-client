@@ -4,3 +4,4 @@ dist
 .cache
 yarn.lock
 .env
+build
