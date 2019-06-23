@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledSearch } from './search.style';
 
-const Search = ({ handler, value, loading, placeHolder }) => (
-  <StyledSearch loading={loading}>
-    <input type="text" placeHolder={placeHolder} value={value} onChange={handler} />
+const Search = ({ handler, value, placeHolder }) => (
+  <StyledSearch>
+    <input type="text" placeholder={placeHolder} value={value} onChange={handler} />
   </StyledSearch>
 );
 
