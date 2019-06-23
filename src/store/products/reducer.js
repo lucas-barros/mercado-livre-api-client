@@ -44,7 +44,7 @@ const removeFromCart = (state, action) => ({
   cart: state.cart.filter(product => product.id !== action.payload.id)
 });
 
-const ACTION_HANDLERS = {
+const handlers = {
   [types.REQUEST]: request,
   [types.SUCCESS]: success,
   [types.ADD_TO_CART]: addToCart,
@@ -63,4 +63,4 @@ const initialState = {
   }
 };
 
-export default createReducer(initialState, ACTION_HANDLERS);
+export default createReducer(initialState, handlers);

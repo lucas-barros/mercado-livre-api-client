@@ -9,11 +9,9 @@ const Product = ({ title, thumbnail, price, handler, direction = 'column', butto
       <Box p="3">
         <img src={thumbnail} alt={title} />
       </Box>
-      <Box p="3">
+      <Box p="3" mt="auto">
         <Flex justifyContent="space-between" flexDirection="column">
-          <Box mb={3}>
-            {title}
-          </Box>
+          <Box mb={3}>{title}</Box>
           <Box width={[1]} mb={3}>
             <strong>${price.toFixed(2)}</strong>
           </Box>
