@@ -1,4 +1,4 @@
-# Marvel API React Client
+# Mercado Livre API React Client
 Project developed for Aceleradev React. It is a react client application that consumes the Mercado livre API.
 
 Check out the [Demo](https://ml-api-react-client.netlify.com/)!
